@@ -86,7 +86,7 @@ float3 avoidArea(float3 position)
 {
 
 	float3 acc = float3(0, 0, 0);
-	_gogleRad = 1.5;	
+	_gogleRad = 2.0;	
 	if (length(_camPos0.xz - position.xz) < _gogleRad){
 		acc.xz += normalize(position.xz - _camPos0.xz) * (length(_camPos0.xz - position.xz) / 2);
 	}

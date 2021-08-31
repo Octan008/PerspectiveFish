@@ -23,11 +23,11 @@ public class CamControl : MonoBehaviour
         }
         // 前に移動
         if (Input.GetKey (KeyCode.UpArrow)) {
-            this.transform.Translate (0.0f,speed*Time.deltaTime*0.1f, 0.0f);
+            this.transform.Translate (0.0f,0.0f,speed*Time.deltaTime*0.1f);
         }
         // 後ろに移動
         if (Input.GetKey (KeyCode.DownArrow)) {
-            this.transform.Translate (0.0f,speed*Time.deltaTime*-0.1f, 0.0f);
+            this.transform.Translate (0.0f,0.0f,speed*Time.deltaTime*-0.1f);
         }
     }
 }

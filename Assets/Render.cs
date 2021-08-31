@@ -97,7 +97,7 @@ public class Render : MonoBehaviour
               (_cam1.transform.position.z + camCoord.z)/camCoord.w
             ));
         this.computeShader.SetVector("_realScale", new Vector2(camCoord.y, camCoord.w));
-        this.computeShader.SetFloat("_gogleRad", 1.0f);
+        this.computeShader.SetFloat("_gogleRad", 1.5f);
         this.computeShader.Dispatch(kernelDraw, Mathf.CeilToInt(drawTexture.width / threadSizeDraw.x), Mathf.CeilToInt(drawTexture.height / threadSizeDraw.y), 1);
         plane.GetComponent<Renderer>().material.mainTexture = drawTexture;
     }
